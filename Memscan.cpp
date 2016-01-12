@@ -4,6 +4,7 @@
 #include <vector>
 #include <stdio.h>
 #include <tlhelp32.h>
+#include <cstdlib>
 
 
 
@@ -129,7 +130,7 @@ int main(){
     std::cout << "\n Changing Data ..." << std::endl;
 
 
-    int newdata = 500;
+    DWORD newdata = std::strtoul(new1.c_str(), NULL, 16);
 
           DWORD newdatasize = sizeof(newdata);
 
